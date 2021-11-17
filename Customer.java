@@ -40,6 +40,10 @@ public class Customer {
 		}
 	}
 
+	public void clearRental() {
+		rentals = new ArrayList<Rental>();
+	}
+
 	public String getReport() {
 		String result = "Customer Report for " + getName() + "\n";
 

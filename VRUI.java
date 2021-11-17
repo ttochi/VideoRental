@@ -43,9 +43,7 @@ public class VRUI {
 			System.out.println("No customer found") ;
 		} else {
 			foundCustomer.printCustomerRentalInfo();
-
-			List<Rental> rentals = new ArrayList<Rental>() ;
-			foundCustomer.setRentals(rentals);
+			foundCustomer.clearRental();
 		}
 	}
 

@@ -28,6 +28,7 @@ public class Video {
 			case VHS: pentalty = 1 ; break ;
 			case CD: pentalty = 2 ; break ;
 			case DVD: pentalty = 3 ; break ;
+			default: pentalty = 1 ; break ;
 		}
 		return pentalty ;
 	}

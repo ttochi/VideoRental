@@ -62,6 +62,7 @@ public class Rental {
 			case Video.VHS: limit = 5 ; break ;
 			case Video.CD: limit = 3 ; break ;
 			case Video.DVD: limit = 2 ; break ;
+			default: limit = 5 ; break ;
 		}
 		return limit ;
 	}

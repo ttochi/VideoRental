@@ -16,9 +16,9 @@ public class Video {
 	private boolean rented ;
 
 	public Video(String title, int videoType, int priceCode, Date registeredDate) {
-		this.setTitle(title) ;
-		this.setVideoType(videoType) ;
-		this.setPriceCode(priceCode) ;
+		this.title = title;
+		this.videoType = videoType;
+		this.priceCode = priceCode;
 		this.registeredDate = registeredDate ;
 	}
 

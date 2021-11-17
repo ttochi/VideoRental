@@ -109,4 +109,10 @@ public class Customer {
 			}
 		}
 	}
+
+	public void rentVideo(Video video) {
+		Rental rental = new Rental(video) ;
+		video.setRented(true);
+		rentals.add(rental);
+	}
 }

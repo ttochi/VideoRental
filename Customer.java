@@ -70,6 +70,8 @@ public class Customer {
 			case Video.NEW_RELEASE:
 				eachCharge = daysRented * 3;
 				break;
+			default:
+				break;
 			}
 
 			eachPoint++;

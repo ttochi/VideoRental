@@ -55,4 +55,32 @@ public class Rental {
 		}
 		return (int) (diff / (1000 * 60 * 60 * 24)) + 1;
 	}
+
+	public double getCharge(int daysRented) {
+		double charge = 0;
+		switch (video.getPriceCode()) {
+			case Video.REGULAR:
+				charge += 2;
+				if (daysRented > 2)
+					charge += (daysRented - 2) * 1.5;
+				break;
+			case Video.NEW_RELEASE:
+				charge = daysRented * 3;
+				break;
+		}
+		
+		return charge;
+	}
+
+	public int getPoint(int daysRented) {
+		int point = 1;
+
+		if ((video.getPriceCode() == Video.NEW_RELEASE) )
+			point++;
+
+		if ( daysRented > getDaysRentedLimit() )
+			point -= Math.min(point, video.getLateReturnPointPenalty()) ;
+
+		return point;
+	}
 }

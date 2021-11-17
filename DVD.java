@@ -10,4 +10,9 @@ public class DVD extends Video {
     public int getLateReturnPointPenalty() {
         return 3;
     }
+
+    @Override
+    public int getLimit() {
+        return 3;
+    }
 }

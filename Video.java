@@ -7,13 +7,11 @@ public abstract class Video {
 	public static final int REGULAR = 1 ;
 	public static final int NEW_RELEASE =2 ;
 
-	private Date registeredDate ;
 	private boolean rented ;
 
-	public Video(String title, int priceCode, Date registeredDate) {
+	public Video(String title, int priceCode) {
 		this.title = title;
 		this.priceCode = priceCode;
-		this.registeredDate = registeredDate ;
 	}
 
 	public abstract int getLateReturnPointPenalty();

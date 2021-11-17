@@ -95,8 +95,8 @@ public class VRUI {
 		customers.add(james) ;
 		customers.add(brown) ;
 
-		Video v1 = new CD("v1",Video.REGULAR, new Date()) ;
-		Video v2 = new DVD("v2", Video.NEW_RELEASE, new Date()) ;
+		Video v1 = new CD("v1",Video.REGULAR) ;
+		Video v2 = new DVD("v2", Video.NEW_RELEASE) ;
 		videos.add(v1) ;
 		videos.add(v2) ;
 
@@ -176,13 +176,11 @@ public class VRUI {
 		System.out.println("Enter price code( 1 for Regular, 2 for New Release ):");
 		int priceCode = scanner.nextInt();
 
-		Date registeredDate = new Date();
-
 		Video video;
 		switch ( videoType ) {
-			case 1: video = new VHS(title, priceCode, registeredDate) ; break ;
-			case 2: video = new CD(title, priceCode, registeredDate) ; break ;
-			case 3: video = new DVD(title, priceCode, registeredDate) ; break ;
+			case 1: video = new VHS(title, priceCode) ; break ;
+			case 2: video = new CD(title, priceCode) ; break ;
+			case 3: video = new DVD(title, priceCode) ; break ;
 			default: video = null;
 		}
 

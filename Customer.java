@@ -99,4 +99,14 @@ public class Customer {
 		}
 		return result ;
 	}
+
+	public void returnRentedVideo(String videoTitle) {
+		for ( Rental rental: rentals ) {
+			if ( rental.getVideo().getTitle().equals(videoTitle) && rental.getVideo().isRented() ) {
+				rental.returnVideo();
+				rental.getVideo().setRented(false);
+				break;
+			}
+		}
+	}
 }

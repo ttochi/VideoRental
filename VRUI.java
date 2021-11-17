@@ -70,6 +70,7 @@ public class VRUI {
 	}
 
 	public void returnVideo() {
+
 		System.out.println("Enter customer name: ") ;
 		String customerName = scanner.next() ;
 
@@ -79,14 +80,7 @@ public class VRUI {
 		System.out.println("Enter video title to return: ") ;
 		String videoTitle = scanner.next() ;
 
-		List<Rental> customerRentals = foundCustomer.getRentals() ;
-		for ( Rental rental: customerRentals ) {
-			if ( rental.getVideo().getTitle().equals(videoTitle) && rental.getVideo().isRented() ) {
-				rental.returnVideo();
-				rental.getVideo().setRented(false);
-				break ;
-			}
-		}
+		foundCustomer.returnRentedVideo(videoTitle);
 	}
 
 	private void init() {

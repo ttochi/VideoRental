@@ -182,9 +182,9 @@ public class VRUI {
 	}
 
 	public void registerCustomer() {
-		System.out.println("Enter customer name: ") ;
+		System.out.println("Enter customer name: ");
 		String name = scanner.next();
-		Customer customer = new Customer(name) ;
+		Customer customer = new Customer(name);
 		customers.add(customer) ;
 	}
 

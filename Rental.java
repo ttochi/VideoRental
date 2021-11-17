@@ -36,20 +36,23 @@ public class Rental {
 
 	public int getDaysRentedLimit() {
 		int limit;
-		int daysRented;
-		long diff;
-		if (getStatus() == 1) { // returned Video
-			diff = returnDate.getTime() - rentDate.getTime();
-		} else { // not yet returned
-			diff = new Date().getTime() - rentDate.getTime();
-		}
-		daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1;
-		if ( daysRented <= 2) {
+		int daysRented = getDaysRented();
+		if (daysRented <= 2) {
 			limit = 0;
 		} else {
 			limit = video.getLimit();
 		}
 
 		return limit;
+	}
+
+	public int getDaysRented() {
+		long diff;
+		if (status == 1) { // returned Video
+			diff = returnDate.getTime() - rentDate.getTime();
+		} else { // not yet returned
+			diff = new Date().getTime() - rentDate.getTime();
+		}
+		return (int) (diff / (1000 * 60 * 60 * 24)) + 1;
 	}
 }

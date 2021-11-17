@@ -29,7 +29,15 @@ public class Customer {
 
 	public void addRental(Rental rental) {
 		rentals.add(rental);
+	}
 
+	public void printCustomerRentalInfo() {
+		System.out.println("Name: " + name +
+			"\tRentals: " + rentals.size()) ;
+		for ( Rental rental: rentals ) {
+			System.out.print("\tTitle: " + rental.getVideo().getTitle() + " ") ;
+			System.out.print("\tPrice Code: " + rental.getVideo().getPriceCode()) ;
+		}
 	}
 
 	public String getReport() {

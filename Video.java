@@ -70,4 +70,8 @@ public class Video {
 	public void setVideoType(int videoType) {
 		this.videoType = videoType;
 	}
+
+	public void printVideoInfo() {
+		System.out.println("Price code: " + priceCode +"\tTitle: " + title);
+	}
 }

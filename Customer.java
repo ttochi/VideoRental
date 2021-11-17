@@ -75,7 +75,7 @@ public class Customer {
 				eachCharge = daysRented * 3;
 				break;
 			default:
-					break;
+				break;
 			}
 
 			eachPoint++;
